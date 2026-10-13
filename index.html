@@ -4,215 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Name</title>
-  <meta name="description" content="Personal website of Your Name — computational chemistry research.">
+  <meta name="description" content="Your Name: computational chemistry, ab initio molecular dynamics, CO2 reduction on iron sulfides.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fbfaf7;
-      --text: #1d1d1f;
-      --muted: #5f6368;
-      --accent: #2f6f5e;
-      --line: #e6e3dc;
-      --card: #ffffff;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141517;
-        --text: #e8e6e3;
-        --muted: #a0a4a8;
-        --accent: #7cc4ad;
-        --line: #2a2c30;
-        --card: #1b1d20;
-      }
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 16px/1.65 "Inter", system-ui, -apple-system, sans-serif;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    nav .inner {
-      max-width: 760px; margin: 0 auto; padding: 14px 16px;
-      display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    }
-    nav .brand { font-weight: 600; color: var(--text); }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; flex-wrap: wrap; }
-    nav ul a { color: var(--muted); font-size: 0.95rem; }
-    nav ul a:hover { color: var(--accent); text-decoration: none; }
-
-    main { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
-    section { padding-top: 56px; }
-    h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin: 0 0 8px; }
-    h2 { font-size: 1.5rem; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
-    h3 { font-size: 1.05rem; margin: 0 0 4px; }
-
-    .hero { display: flex; gap: 28px; align-items: center; padding-top: 64px; flex-wrap: wrap; }
-    .avatar {
-      width: 132px; height: 132px; border-radius: 50%; flex-shrink: 0;
-      background: var(--line) center/cover no-repeat;
-      /* Replace with: background-image: url("photo.jpg"); */
-      display: grid; place-items: center; color: var(--muted); font-size: 0.8rem;
-    }
-    .hero .role { color: var(--muted); margin: 0 0 14px; font-size: 1.05rem; }
-    .links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.95rem; }
-    .links a {
-      border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px;
-      color: var(--text); background: var(--card);
-    }
-    .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-
-    .card {
-      background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-      padding: 18px 20px; margin-bottom: 14px;
-    }
-    .card p { margin: 6px 0 0; color: var(--muted); }
-    .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-    .tags span {
-      font-size: 0.78rem; padding: 2px 9px; border-radius: 999px;
-      background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent);
-    }
-
-    ol.pubs { padding-left: 1.2em; margin: 0; }
-    ol.pubs li { margin-bottom: 14px; }
-    ol.pubs .authors { color: var(--muted); }
-    ol.pubs .venue { font-style: italic; }
-
-    .timeline { list-style: none; padding: 0; margin: 0; }
-    .timeline li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; margin-bottom: 12px; }
-    .timeline .when { color: var(--muted); font-size: 0.92rem; }
-    @media (max-width: 520px) {
-      .timeline li { grid-template-columns: 1fr; gap: 0; }
-      nav ul { gap: 12px; }
-    }
-
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 16px; border-top: 1px solid var(--line); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="math.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
+<div class="page">
 
-<nav>
-  <div class="inner">
-    <a class="brand" href="#">Your Name</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#cv">CV</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main>
-
-  <header class="hero">
-    <div class="avatar">photo</div>
-    <div>
-      <h1>Your Name</h1>
-      <p class="role">PhD Student · Computational Chemistry · Your University</p>
-      <div class="links">
-        <a href="mailto:you@example.edu">Email</a>
-        <a href="https://github.com/your-username">GitHub</a>
-        <a href="https://scholar.google.com/">Google Scholar</a>
-        <a href="https://orcid.org/">ORCID</a>
-        <a href="cv.pdf">CV (PDF)</a>
-      </div>
+  <aside class="side">
+    <a class="name" href="index.html">Your Name</a>
+    <p class="role">PhD student in computational chemistry<br>Your University</p>
+    <nav aria-label="Pages">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="contact">
+      <a href="mailto:you@example.edu">you@example.edu</a>
+      <a href="https://github.com/your-username">GitHub</a>
+      <a href="https://scholar.google.com/">Google Scholar</a>
+      <a href="https://orcid.org/">ORCID</a>
+      <a href="cv.pdf">CV (PDF)</a>
     </div>
-  </header>
+  </aside>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I'm a researcher in the <a href="#">Your Group</a> at Your University, working at the
-      intersection of electrochemistry, surface science, and first-principles simulation.
-      I use ab initio molecular dynamics to understand how reactions happen at
-      solid–liquid interfaces, with a focus on earth-abundant catalysts for CO<sub>2</sub> conversion.
-    </p>
-    <p>
-      Before this, I studied Your Field at Your Previous Institution. Outside research, I enjoy
-      [a hobby or two].
-    </p>
-  </section>
+  <main class="home">
+    <header class="hero">
+      <figure>
+        <canvas id="slab" aria-hidden="true"></canvas>
+        <figcaption>A greigite slab under water, with one CO<sub>2</sub> drifting near the surface. Atoms move like they do in a molecular dynamics run (not to scale).</figcaption>
+      </figure>
+      <p class="lede">I use simulations to watch CO<sub>2</sub> turn into fuel on the surface of an iron sulfide mineral.</p>
+    </header>
 
-  <section id="research">
-    <h2>Research</h2>
-
-    <div class="card">
-      <h3>CO<sub>2</sub> reduction on greigite (Fe<sub>3</sub>S<sub>4</sub>)</h3>
+    <section>
       <p>
-        Greigite is an iron sulfide mineral with structural similarities to the active sites
-        of some enzymes and has been proposed as a prebiotic catalyst. I simulate the
-        electrochemical reduction of CO<sub>2</sub> at the greigite–water interface with
-        explicit solvent, following the reaction mechanisms and free-energy barriers under
-        applied potential.
+        I'm a researcher in the <a href="#">Your Group</a> at Your University, working where
+        electrochemistry, surface science and first-principles simulation meet. I use ab initio
+        molecular dynamics to understand how reactions happen at solid–liquid interfaces, with a
+        focus on earth-abundant catalysts for CO<sub>2</sub> conversion.
       </p>
-      <div class="tags"><span>AIMD</span><span>CP2K</span><span>Electrocatalysis</span><span>Free-energy methods</span></div>
-    </div>
+      <p>
+        Before this, I studied Your Field at Your Previous Institution. Outside research, I enjoy
+        [a hobby or two].
+      </p>
+      <p>More about my work is on the <a href="research.html">Research</a> page.</p>
+    </section>
 
-    <div class="card">
-      <h3>Second project title</h3>
-      <p>One or two sentences describing another project, method, or collaboration.</p>
-      <div class="tags"><span>Keyword</span><span>Keyword</span></div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-    <ol class="pubs" reversed>
-      <li>
-        <span class="authors"><strong>Your Name</strong>, Coauthor A, Advisor B.</span>
-        Title of your paper goes here.
-        <span class="venue">Journal Name</span> <strong>Vol</strong>, pages (Year).
-        <a href="#">[PDF]</a> <a href="#">[DOI]</a>
-      </li>
-      <li>
-        <span class="authors">Coauthor A, <strong>Your Name</strong>, Advisor B.</span>
-        Another paper title.
-        <span class="venue">Journal Name</span> (in preparation).
-      </li>
-    </ol>
-  </section>
-
-  <section id="cv">
-    <h2>Experience &amp; Education</h2>
-    <ul class="timeline">
-      <li><span class="when">20XX – now</span><span><strong>PhD, Chemistry</strong> — Your University</span></li>
-      <li><span class="when">20XX – 20XX</span><span><strong>BS, Your Major</strong> — Your Previous Institution</span></li>
-      <li><span class="when">20XX</span><span><strong>Award or fellowship</strong> — Granting body</span></li>
-    </ul>
-    <p><a href="cv.pdf">Download full CV (PDF) →</a></p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      The best way to reach me is by email at <a href="mailto:you@example.edu">you@example.edu</a>.<br>
-      Department of Chemistry, Your University, Room 000, City, State
-    </p>
-  </section>
-
-</main>
-
-<footer>
-  © <span id="year"></span> Your Name · Hosted on GitHub Pages
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <footer>© <span class="year-now"></span> Your Name. Hosted on GitHub Pages.</footer>
+  </main>
+</div>
+<script src="site.js"></script>
 </body>
 </html>

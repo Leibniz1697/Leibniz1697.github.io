@@ -1,0 +1,123 @@
+/* Shared styles for every page.
+   Palette taken from greigite itself: blue-black metallic mineral, sulfur, iron, water */
+:root {
+  --paper:  #eceff2;
+  --ink:    #18202b;
+  --slate:  #586373;
+  --rule:   #cbd1d8;
+  --link:   #1f4c8c;
+  --sulfur: #dcb937;
+  --iron:   #3a4a5e;
+  --water:  #7f97b3;
+  --oxygen: #c2412f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:  #1a2130;
+    --ink:    #e3e7ec;
+    --slate:  #9aa5b4;
+    --rule:   #2f394b;
+    --link:   #93b6ea;
+    --sulfur: #e6c650;
+    --iron:   #8295ad;
+    --water:  #5d7593;
+    --oxygen: #e2634f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 "IBM Plex Sans", system-ui, sans-serif;
+}
+
+a { color: var(--link); text-decoration: underline; text-decoration-color: var(--sulfur);
+    text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 4px; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+.page {
+  max-width: 1120px; margin: 0 auto; padding: 48px 32px 80px;
+  display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 72px;
+}
+
+/* ---------- Sidebar ---------- */
+.side { position: sticky; top: 48px; align-self: start; }
+.side .name {
+  font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 600;
+  font-size: 1.9rem; line-height: 1.05; color: var(--ink); text-decoration: none; display: block;
+}
+.side .role { color: var(--slate); font-size: 0.95rem; margin: 10px 0 32px; line-height: 1.45; }
+
+.side nav { display: flex; flex-direction: column; margin-bottom: 32px; }
+.side nav a {
+  color: var(--slate); text-decoration: none; padding: 5px 0 5px 14px;
+  border-left: 3px solid var(--rule); font-weight: 500;
+}
+.side nav a:hover { color: var(--ink); }
+.side nav a[aria-current="page"] { color: var(--ink); border-left-color: var(--sulfur); }
+
+.side .contact { display: flex; flex-direction: column; gap: 4px; font-size: 0.95rem; }
+
+/* ---------- Home page hero ---------- */
+.hero canvas {
+  display: block; width: 100%; height: 230px;
+  border-bottom: 3px solid var(--ink);
+}
+.hero figcaption { color: var(--slate); font-size: 0.85rem; margin-top: 8px; }
+.hero figure { margin: 0 0 40px; }
+.lede {
+  font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 500;
+  font-size: clamp(1.6rem, 3.6vw, 2.35rem); line-height: 1.2; margin: 0; max-width: 24ch;
+}
+
+/* ---------- Page content ---------- */
+main { max-width: 68ch; }
+main.home { max-width: none; }
+main.home > section { max-width: 68ch; padding-top: 64px; }
+
+h1 {
+  font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3rem); line-height: 1.05; margin: 0 0 32px;
+  padding-bottom: 14px; border-bottom: 3px solid var(--ink);
+}
+h2 {
+  font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 600;
+  font-size: 1.6rem; line-height: 1.1; margin: 48px 0 20px;
+}
+h1 + h2, h1 + section > h2:first-child { margin-top: 0; }
+h3 { font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
+p { margin: 0 0 14px; }
+
+.project { padding-left: 20px; border-left: 3px solid var(--rule); margin-bottom: 36px; }
+.project:first-of-type { border-left-color: var(--sulfur); }
+.project .methods { color: var(--slate); font-size: 0.92rem; font-style: italic; }
+
+/* Year in the margin: publications and education are true chronologies */
+.dated { list-style: none; margin: 0; padding: 0; }
+.dated li {
+  display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 16px;
+  padding: 12px 0; border-top: 1px solid var(--rule);
+}
+.dated li:last-child { border-bottom: 1px solid var(--rule); }
+.dated .year { color: var(--slate); font-variant-numeric: tabular-nums; }
+.dated .authors { color: var(--slate); }
+
+footer { color: var(--slate); font-size: 0.85rem; padding-top: 72px; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 820px) {
+  .page { grid-template-columns: 1fr; gap: 32px; padding: 28px 16px 64px; }
+  .side { position: static; }
+  .side .role { margin-bottom: 20px; }
+  .side nav { flex-direction: row; flex-wrap: wrap; gap: 4px 18px; margin-bottom: 16px; }
+  .side nav a { border-left: 0; padding: 4px 0; border-bottom: 3px solid transparent; }
+  .side nav a[aria-current="page"] { border-bottom-color: var(--sulfur); }
+  .side .contact { flex-direction: row; flex-wrap: wrap; gap: 4px 16px; }
+  .hero canvas { height: 180px; }
+  main.home > section { padding-top: 48px; }
+  .dated li { grid-template-columns: 1fr; gap: 2px; }
+}
