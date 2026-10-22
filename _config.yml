@@ -1,0 +1,5 @@
+# Jekyll settings. GitHub Pages reads this file automatically.
+title: Your Name
+# Blog posts live at username.github.io/blog/post-name.html
+permalink: /blog/:title.html
+markdown: kramdown

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+<h1>Blog</h1>
+
+<!-- This list fills itself in from the files in the _posts folder, newest first. -->
+<ul class="dated">
+  {% for post in site.posts %}
+  <li>
+    <span class="year">{{ post.date | date: "%b %Y" }}</span>
+    <span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {% if post.summary %}<br><span class="authors">{{ post.summary }}</span>{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>
