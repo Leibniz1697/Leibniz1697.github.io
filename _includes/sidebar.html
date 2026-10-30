@@ -1,19 +1,20 @@
+<!-- The sidebar for every page on the site. Edit it here once and every page updates. -->
 <aside class="side">
-   <a class="name" href="/index.html">Patrick Kelly</a>
-   <p class="role">PhD student in chemical physics<br>University of Maryland</p>
+  <a class="name" href="/">Patrick Kelly</a>
+  <p class="role">PhD student in chemical physics<br>University of Maryland</p>
   <nav aria-label="Pages">
-    <a href="/index.html">About</a>
-    <a href="/research.html">Research</a>
-    <a href="/publications.html">Publications</a>
-    <a href="/blog.html" aria-current="page">Blog</a>
-    <a href="/cv.html">CV</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>About</a>
+    <a href="/research.html"{% if page.url == "/research.html" %} aria-current="page"{% endif %}>Research</a>
+    <a href="/blog.html"{% if page.url == "/blog.html" or page.url contains "/blog/" %} aria-current="page"{% endif %}>Blog</a>
+    <a href="/publications.html"{% if page.url == "/publications.html" %} aria-current="page"{% endif %}>Publications</a>
+    <a href="/cv.html"{% if page.url == "/cv.html" %} aria-current="page"{% endif %}>CV</a>
+    <a href="/contact.html"{% if page.url == "/contact.html" %} aria-current="page"{% endif %}>Contact</a>
   </nav>
   <div class="contact">
     <a href="mailto:ptfk1677@umd.edu">ptfk1677@umd.edu</a>
     <a href="https://github.com/Leibniz1697">GitHub</a>
-    <a href="https://scholar.google.com/citations?user=I0_zQ_EAAAAJ&hl=en&authuser=1/">Google Scholar</a>
-    <a href="https://orcid.org/0000-0001-9659-4664/">ORCID</a>
-    <a href="/cv.pdf">CV (PDF)</a>
+    <a href="https://scholar.google.com/citations?user=I0_zQ_EAAAAJ&amp;hl=en">Google Scholar</a>
+    <a href="https://orcid.org/0000-0001-9659-4664">ORCID</a>
+    <a href="/CV_2026_Patrick_Kelly.pdf">CV (PDF)</a>
   </div>
 </aside>
