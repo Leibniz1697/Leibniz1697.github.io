@@ -1,66 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name</title>
-  <meta name="description" content="Your Name: computational chemistry, ab initio molecular dynamics, CO2 reduction on iron sulfides.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="math.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-</head>
-<body>
-<div class="page">
+---
+layout: default
+main_class: home
+summary: "Patrick Kelly: chemical physics, ab initio molecular dynamics, CO2 reduction on iron sulfides."
+---
+<header class="hero">
+  <figure>
+    <canvas id="slab" aria-hidden="true"></canvas>
+    <figcaption>A greigite slab under water, with one CO<sub>2</sub> drifting near the surface. Atoms move like they do in a molecular dynamics run (not to scale).</figcaption>
+  </figure>
+  <p class="lede">I use simulations to watch CO<sub>2</sub> turn into fuel on the surface of an iron sulfide mineral.</p>
+</header>
 
-  <aside class="side">
-    <a class="name" href="index.html">Your Name</a>
-    <p class="role">PhD student in computational chemistry<br>Your University</p>
-    <nav aria-label="Pages">
-      <a href="index.html" aria-current="page">About</a>
-      <a href="research.html">Research</a>
-      <a href="blog.html">Blog</a>
-      <a href="publications.html">Publications</a>
-      <a href="cv.html">CV</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="contact">
-      <a href="mailto:ptfk1677@umd.edu">ptfk1677@umd.edu</a>
-      <a href="https://github.com/Leibniz1697">GitHub</a>
-      <a href="https://scholar.google.com/citations?user=I0_zQ_EAAAAJ&hl=en&authuser=1/">Google Scholar</a>
-      <a href="https://orcid.org/0000-0001-9659-4664/">ORCID</a>
-      <a href="cv.pdf">CV (PDF)</a>
-    </div>
-  </aside>
-
-  <main class="home">
-    <header class="hero">
-      <figure>
-        <canvas id="slab" aria-hidden="true"></canvas>
-        <figcaption>A greigite slab under water, with one CO<sub>2</sub> drifting near the surface. Atoms move like they do in a molecular dynamics run (not to scale).</figcaption>
-      </figure>
-      <p class="lede">I use simulations to watch CO<sub>2</sub> turn into fuel on the surface of an iron sulfide mineral.</p>
-    </header>
-
-    <section>
-      <p>
-        I'm a researcher in the <a href="#">Your Group</a> at Your University, working where
-        electrochemistry, surface science and first-principles simulation meet. I use ab initio
-        molecular dynamics to understand how reactions happen at solid–liquid interfaces, with a
-        focus on earth-abundant catalysts for CO<sub>2</sub> conversion.
-      </p>
-      <p>
-        Before this, I studied Your Field at Your Previous Institution. Outside research, I enjoy
-        [a hobby or two].
-      </p>
-      <p>More about my work is on the <a href="research.html">Research</a> page.</p>
-    </section>
-
-    <footer>© <span class="year-now"></span> Your Name. Hosted on GitHub Pages.</footer>
-  </main>
-</div>
-<script src="site.js"></script>
-</body>
-</html>
+<section>
+  <p>
+    I'm a Ph.D. student in Chemical Physics at the University of Maryland, College Park, working where
+    electrochemistry, surface science and first-principles simulation meet. I use ab initio
+    molecular dynamics to understand how reactions happen at solid–liquid interfaces, with a
+    focus on earth-abundant catalysts for CO<sub>2</sub> conversion.
+  </p>
+  <p>
+    Before this, I earned an M.S. in Physics at California State University, Fresno, and a B.A.
+    at St. John’s College. Outside research, I enjoy
+    [a hobby or two].
+  </p>
+  <p>More about my work is on the <a href="research.html">Research</a> page.</p>
+</section>
