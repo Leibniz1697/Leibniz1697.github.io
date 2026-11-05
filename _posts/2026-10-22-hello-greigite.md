@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Why simulate CO₂ reduction on a mineral?"
-summary: "A short introduction to what I work on and why greigite is interesting."
+title: "Heterogeneous Catalysis at the Origin of Life on Wet and Icy Worlds"
+summary: "Here I discuss using ab initio quantum chemistry and enhanced sampling to study the formation of organic molecules on catalytic iron-sulfur minerals."
 ---
 
 This is an example post. Replace it with your own, or delete this file once you've written your first real post.
