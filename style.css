@@ -62,16 +62,38 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-ra
 
 .side .contact { display: flex; flex-direction: column; gap: 4px; font-size: 0.95rem; }
 
-/* ---------- Home page hero ---------- */
-.hero canvas {
-  display: block; width: 100%; height: 230px;
-  border-bottom: 3px solid var(--ink);
+/* ---------- Home page banner: one animation at a time ---------- */
+.reel-stage {
+  position: relative; width: 100%; aspect-ratio: 3 / 2; max-height: 440px;
+  background: #fff; border-bottom: 3px solid var(--ink); overflow: hidden;
+  transition: background-color 0.4s ease;
 }
-.hero figcaption { color: var(--slate); font-size: 0.85rem; margin-top: 8px; }
-.hero figure { margin: 0 0 40px; }
+.reel-stage video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  opacity: 0; transition: opacity 0.5s ease;
+}
+.reel-stage video.on { opacity: 1; }
+.reel-bar { display: flex; gap: 12px 20px; align-items: flex-start; justify-content: space-between;
+            flex-wrap: wrap; margin-top: 10px; }
+.reel-caption { margin: 0; color: var(--slate); font-size: 0.9rem; max-width: 52ch; min-width: 0; flex: 1 1 260px; }
+.reel-caption strong { color: var(--ink); font-weight: 600; }
+.reel-controls { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.reel-controls button {
+  font: inherit; color: var(--slate); border: 1px solid var(--rule); background: transparent;
+  border-radius: 4px; cursor: pointer; min-width: 34px; height: 34px; padding: 0 8px;
+  display: inline-grid; place-items: center;
+}
+.reel-controls button:hover { color: var(--ink); border-color: var(--slate); }
+.reel-controls button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.reel-dots { display: flex; gap: 2px; margin: 0 4px; }
+.reel-dots button { border: 0; min-width: 26px; padding: 0; }
+.reel-dots button::before { content: ""; width: 10px; height: 10px; border-radius: 50%;
+                            background: var(--rule); display: block; }
+.reel-dots button[aria-current="true"]::before { background: var(--sulfur); }
+@media (prefers-reduced-motion: reduce) { .reel-stage, .reel-stage video { transition: none; } }
 .lede {
   font-family: "IBM Plex Sans Condensed", sans-serif; font-weight: 500;
-  font-size: clamp(1.6rem, 3.6vw, 2.35rem); line-height: 1.2; margin: 0; max-width: 24ch;
+  font-size: clamp(1.6rem, 3.6vw, 2.35rem); line-height: 1.2; margin: 36px 0 0; max-width: 24ch;
 }
 
 /* ---------- Page content ---------- */
@@ -117,7 +139,6 @@ footer { color: var(--slate); font-size: 0.85rem; padding-top: 72px; }
   .side nav a { border-left: 0; padding: 4px 0; border-bottom: 3px solid transparent; }
   .side nav a[aria-current="page"] { border-bottom-color: var(--sulfur); }
   .side .contact { flex-direction: row; flex-wrap: wrap; gap: 4px 16px; }
-  .hero canvas { height: 180px; }
   main.home > section { padding-top: 48px; }
   .dated li { grid-template-columns: 1fr; gap: 2px; }
 }

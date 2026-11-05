@@ -4,10 +4,34 @@ main_class: home
 summary: "Patrick Kelly: stochastic hydrodynamics, ab initio molecular dynamics, origins of life research, whole cell and tissue modeling."
 ---
 <header class="hero">
-  <figure>
-    <canvas id="slab" aria-hidden="true"></canvas>
-    <figcaption>A greigite slab under water, with one CO<sub>2</sub> drifting near the surface. Atoms move like they do in a molecular dynamics run (not to scale).</figcaption>
-  </figure>
+  <!-- Banner animations. To change a caption, edit its data-caption text.
+       To add one, copy a <video> line and point it at your new file in the videos folder.
+       data-bg is the color shown around the video (match the video's own background). -->
+  <div class="reel" aria-roledescription="carousel" aria-label="Simulation animations">
+    <div class="reel-stage">
+      <video data-bg="#000000" muted playsinline preload="auto" poster="/videos/fes-slab.jpg" src="/videos/fes-slab.mp4"
+        aria-label="Iron sulfide surface in water"
+        data-caption="<strong>Iron sulfide in water.</strong> An ab initio molecular dynamics trajectory of an iron sulfide surface with explicit water."></video>
+      <video data-bg="#ffffff" muted playsinline preload="none" poster="/videos/mitral-valve.jpg" src="/videos/mitral-valve.mp4"
+        aria-label="Flow through a model mitral valve"
+        data-caption="<strong>Flow through a mitral valve.</strong> An immersed boundary simulation of fluid moving past flexible valve leaflets."></video>
+      <video data-bg="#ffffff" muted playsinline preload="none" poster="/videos/wave-packet.jpg" src="/videos/wave-packet.mp4"
+        aria-label="Wave packet on two potential surfaces"
+        data-caption="<strong>Wave packet dynamics.</strong> A wave packet moving on the lower of two coupled potential energy surfaces."></video>
+      <video data-bg="#ffffff" muted playsinline preload="none" poster="/videos/cytonemes.jpg" src="/videos/cytonemes.mp4"
+        aria-label="Cytonemes reaching from air sac primordium cells to the wing disc"
+        data-caption="<strong>Cytoneme signaling.</strong> Cytoneme tips from air sac primordium (ASP) cells reaching the wing disc (WD)."></video>
+    </div>
+    <div class="reel-bar">
+      <p class="reel-caption" aria-live="polite"></p>
+      <div class="reel-controls">
+        <button type="button" class="reel-prev" aria-label="Previous animation">&#8249;</button>
+        <div class="reel-dots"></div>
+        <button type="button" class="reel-next" aria-label="Next animation">&#8250;</button>
+        <button type="button" class="reel-pause" aria-label="Pause">&#10074;&#10074;</button>
+      </div>
+    </div>
+  </div>
   <p class="lede">I use simulations to watch CO<sub>2</sub> turn into fuel on the surface of an iron sulfide mineral.</p>
 </header>
 
