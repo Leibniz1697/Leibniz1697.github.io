@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Smoluchowski Coagulation Equation"
-date: 2020-09-06
-summary: "How a famous equation models particles clumping together in a solution, one term at a time."
+date: 2026-11-05
+summary: "Constructing a mathematical model of particle coagulation dynamics"
 ---
 
 <p class="figcap">Originally posted on my old blog in September 2020.</p>
